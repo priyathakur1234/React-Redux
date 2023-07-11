@@ -27,10 +27,12 @@ import registerServiceWorker from './registerServiceWorker';
 import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './store/reducers/rootReducer';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 
 const store = configureStore({
-  reducer: rootReducer
+  reducer: rootReducer,
+ Middleware: [thunk]
 });
 
 const rootElement = document.getElementById('root');
